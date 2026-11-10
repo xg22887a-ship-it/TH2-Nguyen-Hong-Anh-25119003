@@ -10,9 +10,3 @@
 
 - `vd1_bien_giu_bien_mat.cpp`: `soLanThuc` đặt trong vùng RTC tăng qua mỗi lần thức dậy; `demThuong` trở về 0 sau deep sleep. Kết luận: deep sleep khởi động lại chương trình, chỉ dữ liệu ở vùng RTC được giữ.
 - `vd2_nguyen_nhan_thuc.cpp`: ESP32 thức bằng timer sau 10 giây hoặc sớm hơn khi GPIO4 bị kéo xuống GND; LED GPIO2 nhấp nháy khi CPU đang chạy. Kết luận: sau deep sleep, `setup()` chạy lại và nguyên nhân thức dậy có thể được đọc bằng `esp_sleep_get_wakeup_cause()`.
-
-## Sơ đồ đấu nối
-
-![Sơ đồ Fritzing tham khảo](S%C6%A1%20%C4%91%E1%BB%93%20%C4%91%E1%BA%A5u%20n%E1%BB%91i/so_do_fritzing_tham_khao.png)
-
-Ảnh giữ nguyên từ sơ đồ tham khảo. Code Bài 2 dùng LED GPIO2 và nút GPIO4; biến trở RV1 có trong ảnh nhưng không được các ví dụ hiện tại đọc hoặc điều khiển.
